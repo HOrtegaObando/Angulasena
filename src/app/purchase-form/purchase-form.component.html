@@ -1,0 +1,15 @@
+<form (submit)="onSubmit()">
+    <div>
+      <label for="productName">Nombre del Producto:</label>
+      <input type="text" id="productName" [(ngModel)]="product.name" name="productName" required>
+    </div>
+    <div>
+      <label for="availableQuantity">Cantidad Disponible:</label>
+      <input type="number" id="availableQuantity" [(ngModel)]="product.availableQuantity" name="availableQuantity" required>
+    </div>
+    <div>
+      <label for="purchaseQuantity">Cantidad a Comprar:</label>
+      <input type="number" id="purchaseQuantity" [(ngModel)]="purchaseQuantity" name="purchaseQuantity" required>
+    </div>
+    <button type="submit">Registrar Compra</button>
+</form>

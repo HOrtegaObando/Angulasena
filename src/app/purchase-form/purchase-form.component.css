@@ -1,0 +1,35 @@
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+  }
+  
+  div {
+    margin-bottom: 15px; /* Espacio entre los campos */
+  }
+  
+  label {
+    display: block; /* Mostrar las etiquetas en una nueva línea */
+    margin-bottom: 5px; /* Espacio entre las etiquetas y los campos */
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%; /* Ancho completo para los campos de entrada */
+    padding: 8px; /* Espacio interno en los campos de entrada */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados en los campos de entrada */
+    box-sizing: border-box; /* Tamaño del cuadro incluye el borde */
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* Color de fondo del botón de envío */
+    color: #fff; /* Color del texto del botón de envío */
+    padding: 10px 20px; /* Espacio interno en el botón de envío */
+    border: none; /* Sin borde en el botón de envío */
+    border-radius: 4px; /* Bordes redondeados en el botón de envío */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón de envío */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo del botón de envío al pasar sobre él */
+  }

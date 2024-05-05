@@ -1,0 +1,28 @@
+.product-search {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-search input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .product-search button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .product-search button:hover {
+    background-color: #0056b3;
+  }
