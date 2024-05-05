@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,10 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class PasswordValidationService {
 
-  private baseUrl = 'http://localhost:8080/api/v1';
+  private baseUrl = 'http://localhost:8080/';
   constructor(private http:HttpClient) { }
 
-  matchingPasswords(password: String, confirmPassword: String): Observable<any> {  
-    return this.http.get(`${this.baseUrl}`+'any');  
+  matchingPasswords(user: any): Observable<any> {  
+    return this.http.post(`${this.baseUrl}`+'login', user);  
+  }
+
+  login(user: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}`+'login', user);
   }
 }

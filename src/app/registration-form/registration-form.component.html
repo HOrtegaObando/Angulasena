@@ -10,7 +10,13 @@
     <div>
       <label for="confirmPassword">Confirmar Contraseña:</label>
       <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
-      <div *ngIf="registrationForm.get('confirmPassword').hasError('passwordsNotMatch')">Las contraseñas no coinciden</div>
+      <div *ngIf="registrationForm?.get('password')?.value !== registrationForm?.get('confirmPassword')?.value">Las contraseñas no coinciden</div>
     </div>
-    <button type="submit" [disabled]="registrationForm.invalid">Registrarse</button>
+    <div>
+      {{messageError}}
+    </div>
+    <section class="buttons">
+      <button class="test" type="submit" [disabled]="!registrationForm.valid">Login</button>
+      <button type="submit">Registrarse</button>
+    </section>
   </form>

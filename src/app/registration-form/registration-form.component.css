@@ -18,8 +18,8 @@ form {
   input[type="text"],
   input[type="password"] {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px 0px;
+    font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -43,4 +43,13 @@ form {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between
+  }
+
+  .test {
+    display:inline-block;
   }
