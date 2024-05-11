@@ -1,0 +1,37 @@
+<p>person-registration works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Nombre de usuario:</label>
+      <input type="text" class="form-control" id="username" formControlName="username">
+      <div *ngIf="registrationForm.get('username').invalid && (registrationForm.get('username').touched || registrationForm.get('username').dirty)">
+        <div *ngIf="registrationForm.get('username').errors.required">
+          El nombre de usuario es obligatorio.
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div *ngIf="registrationForm.get('email').invalid && (registrationForm.get('email').touched || registrationForm.get('email').dirty)">
+        <div *ngIf="registrationForm.get('email').errors.required">
+          El correo electrónico es obligatorio.
+        </div>
+        <div *ngIf="registrationForm.get('email').errors.email">
+          Introduce una dirección de correo electrónico válida.
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+      <div *ngIf="registrationForm.get('password').invalid && (registrationForm.get('password').touched || registrationForm.get('password').dirty)">
+        <div *ngIf="registrationForm.get('password').errors.required">
+          La contraseña es obligatoria.
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+  </form>
